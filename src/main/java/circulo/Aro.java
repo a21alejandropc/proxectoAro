@@ -61,7 +61,8 @@ public class Aro {
      * @param radio the radio to set
      */
     public void setRadio(double radio) {
-        this.radio = radio;
+        radio=radio<LIMITERADIO?LIMITERADIO:radio;
+        this.radio = radio; 
     }
 
     public double obterDiametro() {
