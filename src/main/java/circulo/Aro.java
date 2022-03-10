@@ -20,9 +20,7 @@ public class Aro {
     private int coordenadaY;
     private double radio;
 
-    /**
-     * Método Aro
-     */
+   
     public Aro() {
     }
 
