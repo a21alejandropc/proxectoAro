@@ -1,26 +1,30 @@
 package circulo;
 
 /**
- * Probas de refactorización en NetBeans coa clase Aro
+ * Se define la clase aro para obtener el area, diámetro y circunferencia a
+ * partir del radio y las coordenadas x e y
+ *
  *
  * @author alejandro
  */
 public class Aro {
 
     /**
-     *Definida la constante MINIMO
+     * Definida la constante MINIMO
      */
     public static final double MINIMO = 0.0;
 
     /**
-     * Definida la constante MINIMO
+     * Definida la constante LIMITERADIO
      */
     public static final double LIMITERADIO = 0.0;
     private int coordenadaX;
     private int coordenadaY;
     private double radio;
 
-   
+    /**
+     * Método Aro
+     */
     public Aro() {
     }
 
@@ -37,35 +41,35 @@ public class Aro {
     }
 
     /**
-     * @return the coordenadaX
+     * @return Obtenemos coordenadaX
      */
     public int getCoordenadaX() {
         return coordenadaX;
     }
 
     /**
-     * @param coordenadaX the coordenadaX to set
+     * @param coordenadaX
      */
     public void setCoordenadaX(int coordenadaX) {
         this.coordenadaX = coordenadaX;
     }
 
     /**
-     * @return the coordenadaY
+     * @return Devuelve coordenadaY
      */
     public int getCoordenadaY() {
         return coordenadaY;
     }
 
     /**
-     * @param coordenadaY the coordenadaY to set
+     * @param coordenadaY
      */
     public void setCoordenadaY(int coordenadaY) {
         this.coordenadaY = coordenadaY;
     }
 
     /**
-     * @return the radio
+     * @return Devuelve el radio
      */
     public double getRadio() {
         return radio;
@@ -75,13 +79,13 @@ public class Aro {
      * @param radio the radio to set
      */
     public void setRadio(double radio) {
-        radio=radio<LIMITERADIO?LIMITERADIO:radio;
-        this.radio = radio; 
+        radio = radio < LIMITERADIO ? LIMITERADIO : radio;
+        this.radio = radio;
     }
 
     /**
      *
-     * @return Diametro
+     * @return Obtenemos Diametro
      */
     public double obterDiametro() {
         return radio * 2;
@@ -89,7 +93,7 @@ public class Aro {
 
     /**
      *
-     * @return Circunferencia
+     * @return Obtenemos Circunferencia
      */
     public double obterCircunferencia() {
         return Math.PI * obterDiametro();
@@ -97,7 +101,7 @@ public class Aro {
 
     /**
      *
-     * @return
+     * @return Obtenemos Superficie
      */
     public double obterSuperficie() {
         return Math.PI * radio * radio;
@@ -105,7 +109,8 @@ public class Aro {
 
     /**
      *
-     * @return String
+     * @return Devolvemos un String añadiendo la coordenadaX, coordenadaY y el
+     * radio
      */
     @Override
     public String toString() {
